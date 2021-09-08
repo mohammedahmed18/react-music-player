@@ -1,0 +1,53 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  bottom: 0;
+  z-index: 100;
+  background: linear-gradient(to right, black, rgba(black, 0.5), transparent);
+  width: 40vw;
+  transition: left 0.3s ease-in-out;
+  padding-top: 5rem;
+  overflow-y: scroll;
+
+  SVG {
+    position: fixed;
+    top: 0.7rem;
+    left: 0.7rem;
+    cursor: pointer;
+  }
+  SVG:hover {
+    color: white;
+  }
+
+  .no-fav {
+    font-size: 2rem;
+    padding: 1rem;
+    color: white;
+    font-family: shadows into light, Arial, Helvetica, sans-serif;
+  }
+}
+.liked-songs .liked-song {
+  padding: 2rem 3rem;
+  cursor: pointer;
+  transition: background-color 0.1s ease-in-out;
+}
+.liked-songs .liked-song:hover {
+  background-color: rgba($secondary, 0.1);
+}
+.liked-songs .liked-song p:nth-child(1) {
+  color: $text-main;
+  font-size: 1.5rem;
+}
+.liked-songs .liked-song p:nth-child(2) {
+  color: $text-secondary;
+  font-size: 1rem;
+}
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

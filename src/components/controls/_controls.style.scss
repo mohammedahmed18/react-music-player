@@ -1,0 +1,32 @@
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background-color: rgba($main, 0.5);
+  box-shadow: $shadow;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 99;
+  backdrop-filter: blur(10px);
+
+  .time {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    color: $text-secondary;
+    font-size: 2.7rem;
+    text-align: center;
+  }
+  .time > span {
+    padding: 5px;
+  }
+  .controls {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 0.5rem;
+  }
+}

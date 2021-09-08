@@ -1,0 +1,13 @@
+.control-icon {
+  padding: 1.6rem;
+  background-color: rgba(0, 0, 0, 0.326);
+  border-radius: 50%;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+.control-icon:hover {
+  background-color: rgba(52, 52, 52, 0.326);
+}
+.control-icon:active {
+  transform: scale(0.7);
+}

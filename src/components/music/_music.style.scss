@@ -1,0 +1,51 @@
+.song {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  align-items: center;
+  justify-content: center;
+  font-family: shadows into light, Arial, Helvetica, sans-serif;
+  position: relative;
+  .song-image {
+    border-radius: 50%;
+    width: 25vw;
+    height: 25vw;
+    animation-play-state: running;
+    animation-name: spin;
+    animation-duration: 30000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  .song-name {
+    margin-top: 2rem;
+    font-size: 3.5rem;
+    letter-spacing: 0.5rem;
+    color: $text-main;
+    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff,
+      0 0 42px rgb(255, 0, 43), 0 0 82px rgb(255, 0, 43),
+      0 0 92px rgb(255, 0, 43), 0 0 102px rgb(255, 0, 43),
+      0 0 151px rgb(255, 0, 43);
+  }
+
+  .song-artist {
+    color: $text-secondary;
+    font-size: 2.5rem;
+  }
+  svg {
+    width: 40%;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media screen and (max-width: 750px) {
+  .song .song-image {
+    width: 70%;
+  }
+}

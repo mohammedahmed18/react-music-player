@@ -1,0 +1,63 @@
+.songs-list {
+  color: $text-secondary;
+  background-color: rgba($secondary, 0.1);
+  height: 80vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  box-shadow: inset $shadow;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  padding-top: 1rem;
+  .song-card {
+    display: grid;
+    grid-template-columns: 20% auto auto;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    padding: 1rem 2.5rem;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+    position: relative;
+    svg {
+      position: absolute;
+      right: 9%;
+      top: 25%;
+    }
+  }
+  .song-card.active {
+    background-color: rgba($secondary, 0.25);
+  }
+  .song-card:hover {
+    background-color: rgba($secondary, 0.2);
+  }
+  .song-card.active:hover {
+    background-color: rgba($secondary, 0.25);
+  }
+  .song-card .card-image {
+    width: 100%;
+    transform-style: preserve-3d;
+    transform: translate3d(0, 0, 50px);
+    box-shadow: $shadow;
+  }
+  .card-info {
+    padding: 1.5rem;
+    font-family: inter, Arial, Helvetica, sans-serif;
+
+    .card-title {
+      color: $text-main;
+      font-weight: normal;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .card-artist {
+      font-style: italic;
+      text-transform: uppercase;
+      color: $text-secondary;
+    }
+  }
+  .song-card > * {
+    margin: 0.5rem;
+    transform-style: preserve-3d;
+    transform: translate3d(0, 0, 50px);
+  }
+}
