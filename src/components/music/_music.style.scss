@@ -10,6 +10,7 @@
     border-radius: 50%;
     width: 25vw;
     height: 25vw;
+    object-fit: cover;
     animation-play-state: running;
     animation-name: spin;
     animation-duration: 30000ms;
@@ -21,10 +22,12 @@
     font-size: 3.5rem;
     letter-spacing: 0.5rem;
     color: $text-main;
-    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff,
-      0 0 42px rgb(255, 0, 43), 0 0 82px rgb(255, 0, 43),
-      0 0 92px rgb(255, 0, 43), 0 0 102px rgb(255, 0, 43),
-      0 0 151px rgb(255, 0, 43);
+    @if $main == #222222 {
+      text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff,
+        0 0 42px rgb(255, 0, 43), 0 0 82px rgb(255, 0, 43),
+        0 0 92px rgb(255, 0, 43), 0 0 102px rgb(255, 0, 43),
+        0 0 151px rgb(255, 0, 43);
+    }
   }
 
   .song-artist {

@@ -36,11 +36,11 @@
   background-color: rgba($secondary, 0.1);
 }
 .liked-songs .liked-song p:nth-child(1) {
-  color: $text-main;
+  color: rgb(230, 230, 230);
   font-size: 1.5rem;
 }
 .liked-songs .liked-song p:nth-child(2) {
-  color: $text-secondary;
+  color: rgb(138, 138, 138);
   font-size: 1rem;
 }
 .sidebar::-webkit-scrollbar {

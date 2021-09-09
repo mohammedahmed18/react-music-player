@@ -4,17 +4,17 @@
 
 // color palete
 
+// $main: #e7e7e7;
 $main: #222222;
-// $main: white;
 
-$secondary: rgb(228, 228, 228);
+$secondary: rgb(214, 214, 214);
 $shadow: 0px 0px 12px 2px #0a0a0a71;
 $text-main: rgb(240, 240, 240);
 $text-secondary: rgb(147, 147, 147);
 
 @if $main != #222222 {
-  $secondary: rgb(142, 142, 142);
-  $text-main: black;
+  $secondary: rgb(194, 194, 194);
+  $text-main: rgb(27, 27, 27);
   $text-secondary: rgb(103, 103, 103);
 }
 body {
@@ -54,8 +54,11 @@ img.bg {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba($main, 0.7);
-  backdrop-filter: blur(10px);
+  background-color: rgba($main, 0.9);
+  @if $main == #222222 {
+    background-color: rgba(darken($main, 8), 0.8);
+  }
+  backdrop-filter: blur(30px);
 }
 
 .App {

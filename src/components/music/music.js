@@ -8,6 +8,7 @@ class Music extends React.Component {
   state = { audio: null, duration: "00:00", currentTime: "00:00" };
   componentDidMount = () => {
     const audio = React.createRef();
+
     this.setState({ audio });
 
     document.addEventListener("keyup", (event) => {
@@ -29,7 +30,6 @@ class Music extends React.Component {
       }
     }
   };
-
   updateDuration = () => {
     try {
       setTimeout(() => {

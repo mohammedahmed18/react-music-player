@@ -91,15 +91,5 @@ const songs = [
       "https://chillhop.com/wp-content/uploads/2021/07/3b73a510169f14c4af83ac4016e809917412702b-1024x1024.jpg",
     src: "https://mp3.chillhop.com/serve.php/?mp3=22790",
   },
-  {
-    _id: "9",
-    name: "Vitamin D",
-    artist: "fantompower",
-    isPlaying: false,
-    color: "#C76BDB",
-    image:
-      "https://chillhop.com/wp-content/uploads/2021/07/3b73a510169f14c4af83ac4016e809917412702b-1024x1024.jpg",
-    src: "https://mp3.chillhop.com/serve.php/?mp3=22790",
-  },
 ];
 export default songs;
