@@ -5,7 +5,14 @@ import Controls from "../controls/controls";
 
 // ----------------------------------------------------------------------------------------------
 class Music extends React.Component {
-  state = { audio: null, duration: "00:00", currentTime: "00:00" };
+  state = {
+    audio: null,
+    duration: "00:00",
+    currentTime: "00:00",
+    volume: 70,
+    last_volume: 70,
+    // muted: false
+  };
   componentDidMount = () => {
     const audio = React.createRef();
 
@@ -63,6 +70,28 @@ class Music extends React.Component {
     audio.current.currentTime = v;
     this.setState({ audio });
   };
+  onChangeVolume = (e) => {
+    let v = e.target.value;
+    this.setState({ volume: v, last_volume: v });
+    const audio = this.state.audio;
+    audio.current.volume = v / 100;
+    this.setState({ audio });
+    console.log(this.state.volume);
+  };
+  toggleMute = () => {
+    const audio = this.state.audio;
+    let volume = this.state.volume / 100;
+    if (!volume) {
+      //make it not muted
+      audio.current.volume = this.state.last_volume / 100;
+      volume = this.state.last_volume;
+    } else {
+      //make it muted
+      audio.current.volume = 0;
+      volume = 0;
+    }
+    this.setState({ audio, volume });
+  };
   render() {
     const {
       song,
@@ -115,6 +144,9 @@ class Music extends React.Component {
           duration={this.state.duration}
           currentTime={this.state.currentTime}
           onChangeSlider={this.onChangeSlider}
+          onChangeVolume={this.onChangeVolume}
+          vol={this.state.volume}
+          toggleMute={this.toggleMute}
         />
       </div>
     );

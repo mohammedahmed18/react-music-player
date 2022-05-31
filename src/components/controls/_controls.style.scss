@@ -22,11 +22,28 @@
     padding: 5px;
   }
   .controls {
-    width: 80%;
+    // width: 80%;
     display: flex;
+    padding: 0 2rem;
     align-items: center;
-    justify-content: space-evenly;
-    margin: auto;
     padding-bottom: 0.5rem;
+    .basic-controllers {
+      width: 80%;
+      display: flex;
+      justify-content: space-evenly;
+    }
+    .audio-wrapper {
+      display: flex;
+      flex: 1;
+      justify-content: space-between;
+      input {
+        margin-left: 1rem;
+      }
+    }
   }
+}
+
+.audio-range {
+  // width: 30% !important;
+  padding-bottom: 0.5rem;
 }

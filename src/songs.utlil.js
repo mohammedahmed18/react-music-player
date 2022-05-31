@@ -11,6 +11,17 @@ const songs = [
   },
   {
     _id: "2",
+    name: "terror in japan piano",
+    artist: "lofi music",
+    isPlaying: false,
+    color: "#C76BDB",
+    image:
+      "https://pa1.narvii.com/5765/b4287f90c96d3667d3526ee552456144cf876b74_hq.gif",
+    src: "/songs/" + "terror in japan - trigger" + ".mp3",
+  },
+
+  {
+    _id: "3",
     name: "night trouble",
     artist: "petit biscuit",
     isPlaying: false,
@@ -20,7 +31,7 @@ const songs = [
     src: "/songs/" + "PETIT BISCUIT - Night Trouble" + ".mp3",
   },
   {
-    _id: "3",
+    _id: "4",
     name: "bleach",
     artist: "Hurtwave",
     isPlaying: false,
@@ -30,7 +41,7 @@ const songs = [
     src: "/songs/" + "1 Hurtwave - Bleach" + ".mp3",
   },
   {
-    _id: "4",
+    _id: "5",
     name: "ís",
     artist: "yoko kanno",
     isPlaying: false,
@@ -40,7 +51,7 @@ const songs = [
     src: "/songs/" + "ís - Yoko Kanno x POP ETC" + ".mp3",
   },
   {
-    _id: "5",
+    _id: "6",
     name: "von - Hope",
     artist: "yoko kanno",
     isPlaying: false,
@@ -51,7 +62,7 @@ const songs = [
   },
 
   {
-    _id: "6",
+    _id: "7",
     name: "Black and blue",
     artist: "Hurtwave",
     isPlaying: false,
@@ -62,7 +73,7 @@ const songs = [
   },
 
   {
-    _id: "7",
+    _id: "8",
     name: "Memories pt.1",
     artist: "Ruck p",
     isPlaying: false,
@@ -72,7 +83,7 @@ const songs = [
     src: "https://mp3.chillhop.com/serve.php/?mp3=21660",
   },
   {
-    _id: "8",
+    _id: "9",
     name: "Roses n Flames",
     artist: "C Y G N",
     isPlaying: false,
@@ -82,7 +93,7 @@ const songs = [
     src: "https://mp3.chillhop.com/serve.php/?mp3=14985",
   },
   {
-    _id: "9",
+    _id: "10",
     name: "Vitamin D",
     artist: "fantompower",
     isPlaying: false,

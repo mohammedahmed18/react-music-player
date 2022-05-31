@@ -3,6 +3,8 @@ import {
   faPause,
   faForward,
   faBackward,
+  faVolumeMute,
+  faVolumeUp,
 } from "@fortawesome/free-solid-svg-icons";
 import React, { useState } from "react";
 import Icon from "../side-components/icon";
@@ -32,6 +34,9 @@ const Controls = ({
   duration,
   currentTime,
   onChangeSlider,
+  onChangeVolume,
+  vol,
+  toggleMute,
 }) => {
   const [footerStyle, setFooterStyle] = useState({});
   setTimeout(() => {
@@ -58,12 +63,33 @@ const Controls = ({
       </div>
 
       <div className="controls">
-        <Icon handleClick={handleSkipBackward} icon={faBackward} />
-        <Icon
-          handleClick={hadleTogglePlay}
-          icon={isPlaying ? faPause : faPlay}
-        />
-        <Icon handleClick={handleSkipForward} icon={faForward} />
+        <div className="basic-controllers">
+          <Icon handleClick={handleSkipBackward} icon={faBackward} />
+          <Icon
+            handleClick={hadleTogglePlay}
+            icon={isPlaying ? faPause : faPlay}
+          />
+          <Icon handleClick={handleSkipForward} icon={faForward} />
+        </div>
+        {/* audio controller */}
+
+        <div className="audio-wrapper">
+          <Icon
+            icon={vol == 0 ? faVolumeMute : faVolumeUp}
+            handleClick={toggleMute}
+          />
+
+          <input
+            type="range"
+            className="audio-range"
+            // min="0"
+            // max="100"
+            min={0}
+            max={100}
+            value={vol}
+            onChange={(e) => onChangeVolume(e)}
+          />
+        </div>
       </div>
     </div>
   );
