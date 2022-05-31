@@ -84,7 +84,8 @@ class Music extends React.Component {
     if (!volume) {
       //make it not muted
       audio.current.volume = this.state.last_volume / 100;
-      volume = this.state.last_volume;
+      const last_volume = this.state.last_volume;
+      volume = last_volume != 0 ? last_volume : 100;
     } else {
       //make it muted
       audio.current.volume = 0;

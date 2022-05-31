@@ -47,3 +47,15 @@
   // width: 30% !important;
   padding-bottom: 0.5rem;
 }
+
+@media screen and (max-width: 750px) {
+  .controls {
+    flex-direction: column;
+  }
+  .basic-controllers {
+    width: 100%;
+  }
+  .audio-wrapper {
+    margin: auto;
+  }
+}
