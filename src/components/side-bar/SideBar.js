@@ -17,36 +17,38 @@ const Sidebar = ({ toggleSideBar, isSideBarShown, songs, handleClickCard }) => {
     }
   });
   return (
-    <div
-      className="sidebar"
-      style={isSideBarShown ? { left: "0" } : { left: "-100%" }}
-    >
-      <div className="liked-songs">
-        {likedSongs.length !== 0 ? (
-          likedSongs.map((s) => (
-            <div
-              className="liked-song"
-              key={s._id}
-              onClick={() => {
-                handleClickCard(s);
-              }}
-            >
-              <p>{s.name}</p>
-              <p>{s.artist}</p>
-            </div>
-          ))
-        ) : (
-          <p className="no-fav">you don't have any favourite songs yet !</p>
-        )}
-      </div>
-
+    <>
       <FontAwesomeIcon
         onClick={toggleSideBar}
         icon={isSideBarShown ? faTimes : faHeart}
         color="#c4c4c4"
         size="3x"
+        className="like-icon"
       />
-    </div>
+      <div
+        className="sidebar"
+        style={isSideBarShown ? { left: "0" } : { left: "-100%" }}
+      >
+        <div className="liked-songs">
+          {likedSongs.length !== 0 ? (
+            likedSongs.map((s) => (
+              <div
+                className="liked-song"
+                key={s._id}
+                onClick={() => {
+                  handleClickCard(s);
+                }}
+              >
+                <p>{s.name}</p>
+                <p>{s.artist}</p>
+              </div>
+            ))
+          ) : (
+            <p className="no-fav">you don't have any favourite songs yet !</p>
+          )}
+        </div>
+      </div>
+    </>
   );
 };
 
