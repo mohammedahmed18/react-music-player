@@ -1,4 +1,16 @@
 const songs = [
+  {
+    
+     _id: "1",
+    name: "Birds in Nature",
+    artist: "",
+    isPlaying: false,
+    color: "#C76BDB",
+    image:
+      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80",
+    src: "/songs/" + "birds.mp3",
+  
+  }
 //   {
 //     _id: "1",
 //     name: "After Dark",
