@@ -33,6 +33,7 @@
 .liked-songs .liked-song {
   padding: 2rem 3rem;
   cursor: pointer;
+  backdrop-filter: blur(10px);
   transition: background-color 0.1s ease-in-out;
 }
 .liked-songs .liked-song:hover {
